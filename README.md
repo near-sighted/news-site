@@ -1,6 +1,10 @@
 <div align="center">
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/fF40a8e"  ><a href="//imgur.com/a/fF40a8e">NEAR Sighted Logo</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+<a href="https://www.nearsighted.news" title="NEAR Sighted" target="_blank">
+
+  <img src="https://i.imgur.com/bhNHEiI.png" width="128" />
+  
+</a>
 
 <p>
 Fast-track your JAMstack development & learning
