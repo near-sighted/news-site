@@ -1,10 +1,6 @@
 <div align="center">
 
-<a href="https://www.jammeryhq.com" title="JammeryHQ" target="_blank">
-
-  <img src="https://jammeryhq.com/jammeryhq.png" width="128" />
-  
-</a>
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/fF40a8e"  ><a href="//imgur.com/a/fF40a8e">NEAR Sighted Logo</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 <p>
 Fast-track your JAMstack development & learning
