@@ -7,7 +7,7 @@
 </a>
 
 <p>
-Fast-track your JAMstack development & learning
+NEAR Sighted. Community Awareness. See what we see. 
 </p>
 </div>
 
