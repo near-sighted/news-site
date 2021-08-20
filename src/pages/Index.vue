@@ -6,10 +6,10 @@
       </template>
       <template v-slot:content>
         <p class="text-4xl md:text-6xl">
-          Ready. Set. Learn.
+          We cut through the NOISE
         </p>
         <p class="text-lg md:text-2xl">
-          It's never too late to learn something new!
+           so you don't have to
         </p>
       </template>
     </PageHeader>
@@ -19,25 +19,25 @@
 
     <SectionContribute />
 
-    <SectionThinkDifferent />
+    <SectionCutThroughNoise />
     
-    <div class="container text-center mx-auto">
+    <!-- <div class="container text-center mx-auto">
       <SectionLatestNews />
-    </div>
+    </div> -->
 
     
 
-    <SectionOpenSource />
+    <!-- <SectionOpenSource /> -->
   </Layout>
 </template>
 
 <script>
 import PageHeader from '~/components/PageHeader'
 import SectionLatestArticles from '~/components/sections/LatestArticles'
-import SectionLatestNews from '~/components/sections/LatestNews'
+// import SectionLatestNews from '~/components/sections/LatestNews'
 import SectionContribute from '~/components/sections/Contribute'
-import SectionThinkDifferent from '~/components/sections/ThinkDifferent'
-import SectionOpenSource from '~/components/sections/OpenSource'
+import SectionCutThroughNoise from '~/components/sections/CutThroughNoise'
+// import SectionOpenSource from '~/components/sections/OpenSource'
 
 export default {
   metaInfo: {
@@ -46,10 +46,10 @@ export default {
   components: {
     PageHeader,
     SectionLatestArticles,
-    SectionLatestNews,
+    // SectionLatestNews,
     SectionContribute,
-    SectionThinkDifferent,
-    SectionOpenSource
+    SectionCutThroughNoise,
+    // SectionOpenSource
   }
 };
 </script>

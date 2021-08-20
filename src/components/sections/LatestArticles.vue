@@ -7,7 +7,7 @@
         </h2>
         <p
           class="text-2xl">
-          Curious what new articles are on our website? Check out our latest articles!
+          Check out out latest summaries from Discord
         </p>
       </div>
       <div class="flex flex-wrap -m-4">

@@ -1,14 +1,14 @@
 ---
-title: Monday - 2021-08-16 - DISCORD
+title: DISCORD | Monday, 2021-08-16
 tags: discord, rust, assemblyscript
-excerpt: DevRel announces Office Hours! Ref.Finance gets hacked
+excerpt: DevRel announces Office Hours! Ref.Finance incident
 createdAt: 2021-08-16
 ---
 
 ## Summary of various Discord channels, issues, and topics
 
-:::info
-**Note:** The "Unanswered Questions" in these summaries don't mean they were _never_ answered, just not on the same date they were posted.
+:::info note
+The "Unanswered Questions" in these summaries don't mean they were _never_ answered, just not on the same date they were posted.
 :::
 
 

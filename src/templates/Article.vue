@@ -3,8 +3,11 @@
     <PageHeader>
       <template v-slot:content>
         <h1 class="text-4xl lg:text-6xl">
-          {{ $page.entry.title }}
+          {{ titlePlatform }}
         </h1>
+        <h2 class="text-3xl lg:text-4xl">
+          {{ titleDate }}
+        </h2>
       </template>
     </PageHeader>
 
@@ -54,8 +57,19 @@ export default {
     PageHeader,
     PageSidebar
   },
+  data() {
+    return {
+      titlePlatform: "",
+      titleDate: "",
+    }
+  },
+  
+
 
   metaInfo () {
+    const parsedTitle = this.$page.entry.title.split('|')
+    this.titlePlatform = parsedTitle[0]
+    this.titleDate = parsedTitle[1]
     return {
       title: this.$page.entry.title
     };

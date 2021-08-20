@@ -13,10 +13,10 @@ NEAR Sighted. Community Awareness. See what we see.
 
 <hr />
 
-## About the starter
+## What Are we?
 
-Gridsome starter that is ideal for articles/tutorials that uses markdown for the content and Tailwind CSS for the styles.
-
+* Daily summaries of developer related activity happening in NEAR ecosystem (Discord, Telegram, StackOverflow, Twitter)
+* Highlights of dev-related questions and answers with helpful snippets of code, tips, links, and other resources to help you on your journey to building on [NEAR](https://near.org).
 ## Key features
 
 * Built with Tailwind CSS
@@ -24,13 +24,11 @@ Gridsome starter that is ideal for articles/tutorials that uses markdown for the
 * Fulltext search
 * Dynamic custom pages
 * Pagination
-* Different content types for articles and news
 * Syntax Highlighting via PrismJS
 
-## Installation
+## Credits
 
-Run the following command to create a new gridsome project 
+created by [Ben Sayeg] 
 
-```
-gridsome create my-blog https://github.com/jammeryhq/gridsome-starter-articles
-```
+Built with [Gridsome](https://github.com/jammeryhq/gridsome-starter-articles)
+

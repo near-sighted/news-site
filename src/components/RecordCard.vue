@@ -6,10 +6,15 @@
       class="h-full border-2 border-gray-200 rounded-lg overflow-hidden relative hover:bg-shark-50 hover:bg-opacity-60">
       <div class="p-6">
         <h1
-          class="title-font text-2xl font-medium text-gray-900 mb-3"
+          class="title-font text-2xl font-medium text-gray-900 mb-2"
           :class="{'mb-12' : !record.excerpt}">
-          {{ record.title }}
+          {{ titlePlatform }}
         </h1>
+        <h2
+          class="title-font text-xl font-medium text-gray-900 mb-3"
+          :class="{'mb-12' : !record.excerpt}">
+          {{ titleDate }}
+        </h2>
         <div
           v-if="record.excerpt"
           class="leading-relaxed mb-12 text-gray-800 text-left"
@@ -71,6 +76,13 @@ export default {
       default () {
         return {}
       }
+    }
+  },
+  data() {
+    const parsedRecord = this.record.title.split('|')
+    return {
+      titlePlatform: parsedRecord[0],
+      titleDate: parsedRecord[1],
     }
   }
 };

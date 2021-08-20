@@ -1,7 +1,7 @@
 ---
-title: Tuesday - 2021-08-17 - DISCORD
+title: DISCORD | Tuesday, 2021-08-17
 tags: discord, assemblyscript, gas, indexer
-excerpt: DevRel announces Office Hours! Ref.Finance gets hacked
+excerpt: More DevRel Office Hours! Is AssemblyScript GASlighting me??
 createdAt: 2021-08-17
 ---
  
@@ -9,12 +9,12 @@ createdAt: 2021-08-17
 
 ## Summary of various Discord channels, issues, and topics for a 24 hour period (12am-12am EST)
 
-:::info
-**Note:** We will be focusing our detailing efforts just on **#dev-support** channel activity from now on until more contributors join the NEAR Sighted team :person_doing_cartwheel: :person_doing_cartwheel: :person_doing_cartwheel: 
+:::important update
+We are focusing our detailing efforts just on **#dev-support** channel activity right now until more contributors join the NEAR Sighted team :person_doing_cartwheel: :person_doing_cartwheel: :person_doing_cartwheel: 
 :::
 
-:::info
-**Note:** The "Unanswered Questions" in these summaries don't mean they were _never_ answered, just not on the same date they were posted.
+:::info note
+The "Unanswered Questions" in these summaries don't mean they were _never_ answered, just not on the same date they were posted.
 :::
 
 
@@ -65,7 +65,7 @@ createdAt: 2021-08-17
     - pointed to https://app.ref.finance/ 
     - might still be under maintenance from fallout of recent hack.
 
-  - [gas - "How does paying for GAS work for view calls?"](https://discord.com/channels/490367152054992913/542945453533036544/877357927172800513)
+  - [AS - "How does paying for GAS work for view calls?"](https://discord.com/channels/490367152054992913/542945453533036544/877357927172800513)
     - Although not answered in the thread, this was brought up in DevRel Office Hours
       - view calls _do_ in fact use GAS.
       - Currently, NEAR is fronting the cost of GAS for view calls

@@ -1,7 +1,7 @@
 ---
-title: Wednesday - 2021-08-18 - DISCORD
+title: DISCORD | Wednesday, 2021-08-18
 tags: discord, rust, assemblyscript, aurora, rainbowbridge, humanman, multitoken
-excerpt: DevRel Office Hours day 2! Chron jobs on the blockchain?! MultiToken meeting open to comments. Sim testing in TypeScript with `near-runner`
+excerpt: Chron jobs on the blockchain?! MultiToken meeting open to comments. Sim testing in TypeScript with `near-runner`
 createdAt: 2021-08-18
 ---
  
@@ -9,12 +9,12 @@ createdAt: 2021-08-18
 
 ## Summary of various Discord channels, issues, and topics for a 24 hour period (12am-12am EST)
 
-:::info
-**Note:** We are focusing our detailing efforts just on **#dev-support** channel activity right now until more contributers join the NEAR Sighted team :person_doing_cartwheel: :person_doing_cartwheel: :person_doing_cartwheel: 
+:::important update
+We are focusing our detailing efforts just on **#dev-support** channel activity right now until more contributors join the NEAR Sighted team :person_doing_cartwheel: :person_doing_cartwheel: :person_doing_cartwheel: 
 :::
 
-:::info
-**Note:** The "Unanswered Questions" in these summaries don't mean they were _never_ answered, just not on the same date they were posted.
+:::info note
+The "Unanswered Questions" in these summaries don't mean they were _never_ answered, just not on the same date they were posted.
 :::
 
 

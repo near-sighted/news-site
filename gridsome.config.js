@@ -35,7 +35,7 @@ function addStyleResource(rule) {
 }
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'NEAR Sighted',
   permalinks: {
     trailingSlash: false
   },
@@ -183,13 +183,15 @@ module.exports = {
   },
   transformers: {
     remark: {
-      plugins: [
-        ['@noxify/gridsome-plugin-remark-embed', embedConfig],
-        ['gridsome-plugin-remark-prismjs-all', {
-          noInlineHighlight: false,
-          showLineNumbers: true
-        }]
-      ]
+      externalLinksTarget: "_blank",
+      externalLinksRel: ["nofollow", "noopener", "noreferrer"],
+      anchorClassName: "icon icon-link",
+      plugins:  ["gridsome-plugin-remark-container",
+                ['@noxify/gridsome-plugin-remark-embed', embedConfig],
+                ['gridsome-plugin-remark-prismjs-all', {
+                  noInlineHighlight: false,
+                  showLineNumbers: true
+                }]]
     }
   },
   chainWebpack: config => {

@@ -12,13 +12,13 @@
 
         <div
           class="text-xl font-medium title-font w-full md:w-1/2 py-12 md:py-0">
-          <h3 class="text-4xl lg:text-6xl text-center">
-            Th!nk different
+          <h3 class="text-3xl lg:text-4xl text-center mb-4">
+            Cut Through the NOISE
           </h3>
-          <p class="px-4 text-xl lg:text-2xl">
-            Sometimes you need a different perspective to achieve your goal.
+          <p class="px-3 text-xl mb-3">
+            The NEAR community is active in every corner of the ecosystem, and
             <br>
-            With our articles, we want to help you to see your challenges from a different perspective and to solve them faster.
+            NEAR Sighted is here to help you make sense of it all
           </p>
           <p class="text-center mt-8">
             <g-link

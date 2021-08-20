@@ -3,16 +3,20 @@
 
 import DefaultLayout from '~/layouts/Default.vue'
 import ThemeSwitch from '~/components/ThemeSwitch.vue'
+// import emoji from 'remark-emoji'
 
 import 'prismjs/themes/prism.css'
 import '~/assets/scss/main.scss'
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
+// import "gridsome-plugin-remark-container/themes/default.css";
+import "gridsome-plugin-remark-container/themes/docusaurus.css";
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
   
   Vue.component('ThemeSwitch', ThemeSwitch)
+  // Vue.use(emoji)
 
   head.meta.push({
     name: 'theme-color',

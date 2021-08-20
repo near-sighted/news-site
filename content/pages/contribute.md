@@ -1,5 +1,5 @@
 ---
-title: Contribute to NEAR Sighted
+title: Contribute
 subtitle: Earn $NEAR and help developers by summarizing the day's highlights
 image: dustin-lee-jLwVAUtLOAQ-unsplash.jpg
 sidebar: true
@@ -14,19 +14,12 @@ Who you are
 * You know you're way around a markdown file
 * You have great ideas for stories related to NEAR, and welcome feedback.
 
-Whatever the reason is - Thank you!
 
 ### Prerequisites
 
-* NodeJS (v8.3+)
-* Yarn or NPM
-
-### Where is the content stored
-
-* Articles - `/content/articles`
-* Resources - `/content/resources`
-* Credits - `/content/credits`
-
+  * active in NEAR community
+  * knowledge of NEAR resources (docs, repos, dApps)
+  
 ## How to contribute
 
-1. Reach out to  `Ben | NEAR`  in Discord  
+   * Reach out to  `Ben | NEAR`  in [Discord](https://discord.com/invite/UY9Xf2k)  
