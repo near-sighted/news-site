@@ -76,7 +76,7 @@
       }
     }
 
-    types: allResourceType {
+    types: allResourceType(sortBy: "title", order: ASC) {
       edges {
         node {
           id
@@ -86,7 +86,7 @@
       }
     }
 
-    tags: allResourceTag {
+    tags: allResourceTag(sortBy: "title", order: ASC) {
       edges {
         node {
           id
