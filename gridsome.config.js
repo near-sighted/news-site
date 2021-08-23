@@ -170,7 +170,7 @@ module.exports = {
       {
         name: 'resourcesByType',
         path: '/resources/filter/type/:title',
-        component: './src/templates/ResourceTypeFilter.vue'
+        component: './src/templates/ResourceTopicFilter.vue'
       }
     ],
     ResourceTag: [

@@ -1,8 +1,8 @@
 ---
 title: NEAR Protocol
 excerpt: Community-based Layer 1 blockchain
-type: blockchain
+type: near
 link: https://near.org
-tags: blockchain, defi, rust, assemblyscript
+tags: defi, rust, assemblyscript, near
 createdAt: 2021-08-16
 ---

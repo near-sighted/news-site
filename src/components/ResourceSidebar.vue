@@ -15,7 +15,7 @@
       </div>
       <div>
         <h3 class="border-b-4 pb-3 mb-3 border-gray-200 text-xl">
-          Filter by type
+          Filter by topic
         </h3>
         <ul class="pl-0">
           <li
