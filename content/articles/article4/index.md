@@ -1,10 +1,10 @@
-<!-- # DISCORD | Thursday, 2021-08-19 -->
 ---
 title: DISCORD | Thursday, 2021-08-19
 tags: discord, rust, assemblyscript, humanman, nft, delegation, validators, staking, 
 excerpt: Show me the NEPs! Rate limit? We don't need no stinking rate limits.
 createdAt: 2021-08-19
 ---
+<!-- # DISCORD | Thursday, 2021-08-19 -->
  
 ## Summary of various Discord channels, issues, and topics for a 24 hour period (12am-12am EST)
 
