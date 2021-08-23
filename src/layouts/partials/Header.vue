@@ -1,9 +1,6 @@
 <template>
   <header class="bg-shark-500 text-white body-font">
     <div class="container mx-auto flex flex-wrap p-5 flex-row items-center">
-      <span class="font-weight: bold; color: green;">
-        BETA
-      </span>
       <g-link
         to="/"
         class="flex title-font font-medium items-center">
@@ -11,7 +8,9 @@
         <span class="ml-2 text-xl">{{ $static.metadata.siteName}}</span>
 
       </g-link>
-
+      <span style="font-weight: bold; color: #27c111;" class="ml-3">
+        BETA
+      </span>
       <nav class="header-links ml-auto flex flex-wrap items-center text-xl justify-center">
         <g-link
           to="/"
