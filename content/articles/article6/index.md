@@ -1,10 +1,10 @@
 <!-- # DISCORD | WEEKLY ROUNDUP 2021-08-15 -> 2021-08-22 -->
 
 ---
-title: DISCORD | WEEKLY ROUNDUP
+title: DISCORD | WEEKLY ROUNDUP 08/16 - 08/22/21
 tags: discord, rust, assemblyscript, aurora, rainbowbridge, humanman, multitoken
 excerpt: Where is the NEARest entrance? Talk to me, computer!
-createdAt: Monday, 2021-08-23
+createdAt: 2021-08-23
 --- 
 ***
 

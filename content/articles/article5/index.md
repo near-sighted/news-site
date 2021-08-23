@@ -3,7 +3,7 @@
 title: DISCORD | Friday, 2021-08-20
 tags: discord, rust, assemblyscript, nft, rainbowbridge, 
 excerpt: Choking up talking about mult-sharding. I met NEAR at a rave.
-createdAt: Friday, 2021-08-20
+createdAt: 2021-08-20
 ---
  
 
