@@ -1,6 +1,9 @@
 <template>
   <header class="bg-shark-500 text-white body-font">
     <div class="container mx-auto flex flex-wrap p-5 flex-row items-center">
+      <span class="font-weight: bold; color: green;">
+        BETA
+      </span>
       <g-link
         to="/"
         class="flex title-font font-medium items-center">
