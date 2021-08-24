@@ -188,6 +188,7 @@ module.exports = {
       anchorClassName: "icon icon-link",
       plugins:  ["gridsome-plugin-remark-container",
                 ['@noxify/gridsome-plugin-remark-embed', embedConfig],
+                'gridsome-plugin-remark-emoji',
                 ['gridsome-plugin-remark-prismjs-all', {
                   noInlineHighlight: false,
                   showLineNumbers: true

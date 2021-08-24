@@ -23,7 +23,7 @@ createdAt: 2021-08-20
 ## #dev-support
 
 - [Question:](discord://discordapp.com/channels/490367152054992913/542945453533036544/878190558248574987) Is there a direct function to fetch the NEAR transactions associated to an account?
-```typescript=
+```typescript
 fetch("https://helper.mainnet.near.org/account/" + ACCOUNT_ID + "/activity?limit=100", requestOptions)
 
 // look for result[i].action_kind == "TRANSFER"
