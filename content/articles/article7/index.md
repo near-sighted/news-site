@@ -1,7 +1,7 @@
 ---
-title: DISCORD
-tags: discord, rust, assemblyscript, aurora, rainbowbridge, humanman, multitoken
-excerpt: two enticing sentences. can be playful
+title: DISCORD | Monday, 2021-08-23
+tags: discord, rust, assemblyscript, staking,
+excerpt: Going straight to mainnet to experiment. What's the worst that can happen? Are Gas panics just a bunch of hot air?
 createdAt: Monday, 2021-08-23
 ---
  
