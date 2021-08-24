@@ -97,7 +97,6 @@ any links mentioned in the chat can be found here the following day as well.
 
 
 
-
 ## Highlights
 
 A few links taken out of context from Monday's office hours. Most have to do with finding the most current tutorials. 
@@ -111,7 +110,15 @@ A few links taken out of context from Monday's office hours. Most have to do wit
         - [Shards Aliance Discord](discord://discordapp.gg/ZaHCrrG7)
         - https://github.com/near/core-contracts/blob/master/staking-pool/src/lib.rs#L429-L435
         - 
-
+- Running a validator node on mainnet. Unable to withdraw staking funds
+  - User thought they were essentially paying for validator seat
+  - In reality they were attaching a reserve amount to pay for contract storage of the staking pool they created, which is standard when creating a staking pool.
+    - These staking pools are trustless by design, meaning once they are created, no one "owns" them.
+    - Attempts to delete the staking pool will throw an error that the contract is holding "too much state".
+    - The validator will only be able to withdraw rewards from the staking pool.  
+    - Becoming a validator costs roughly 3.5M NEAR.
+        - You can raise that amount by convincing others to delegate NEAR to your staking pool.
+    - !!!ALWAYS TEST YOUR VALIDATOR STRUCTURE ON TESTNET FIRST!!!
 
 ***
 
