@@ -35,7 +35,6 @@ Transaction Error
 ```bash
     near call prtk4.testnet design --accountId prtk4.testnet --gas=200000000000000
 ```
-    
 ***
 
 #### Question:[(link)](discord://discordapp.com/channels/490367152054992913/542945453533036544/879424899121303602)
@@ -120,6 +119,7 @@ A few links taken out of context from Monday's office hours. Most have to do wit
 - Multiple GAS issues. What additional information should Gas panic messages have? 
 - DevRel Office Hours continues to be a great way to connect NEAR members with the community.
 - Always test on testnet first, especially if you are diving into validation, delegating, and staking. Make your mistakes with testnet not real $NEAR!
+- The docs are a great resource that update frequently. It's worth subscribing to the repo so you're updated when they are. [docs repo](https://github.com/near/docs)
 
 # JUST 4 DAYS AWAY SIGN UP NOW!
 
