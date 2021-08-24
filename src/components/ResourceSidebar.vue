@@ -127,3 +127,10 @@ export default {
   }
 };
 </script>
+
+<style>
+  a.active.active--exact {
+    color: #58a6ff;
+    font-weight: bold;
+  } 
+</style>

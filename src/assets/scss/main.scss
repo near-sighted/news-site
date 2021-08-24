@@ -38,7 +38,9 @@ body {
     }
 
     .active--exact {
-        @apply text-smalt-blue-500;
+        font-weight: bold;
+        color: #27c111;
+        @apply text-smalt-blue-500;        
     }
 }
 
