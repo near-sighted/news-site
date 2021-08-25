@@ -1,7 +1,7 @@
 ---
 title: DISCORD | Tuesday, 2021-08-24
-tags: discord, rust, assemblyscript, aurora, rainbowbridge, humanman, multitoken
-excerpt: two enticing sentences. can be playful
+tags: discord, dao, sputnik, aurora,
+excerpt: Hackawhen?? It's a hard fork life for ref.
 createdAt: Tuesday, 2021-08-24
 ---
  
