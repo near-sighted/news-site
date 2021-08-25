@@ -75,7 +75,8 @@ export default {
       meta: [
         { property: 'og:title', content: this.$page.entry.title },
         { property: 'og:description', content: this.$page.entry.excerpt },
-        { property: 'og:image', content: '~/favicon.png' }
+        { property: 'og:image', content: '~/favicon.png' },
+        { property: 'og:url', content: 'https://nearsighted.news' },
       ],
     };
   }
