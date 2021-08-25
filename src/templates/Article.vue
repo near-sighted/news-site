@@ -71,7 +71,12 @@ export default {
     this.titlePlatform = parsedTitle[0]
     this.titleDate = parsedTitle[1]
     return {
-      title: this.$page.entry.title
+      title: this.$page.entry.title,
+      meta: [
+        { property: 'og:title', content: this.$page.entry.title },
+        { property: 'og:description', content: this.$page.entry.excerpt },
+        { property: 'og:image', content: '~/favicon.png' }
+      ],
     };
   }
 };

@@ -20,4 +20,9 @@ export default function (Vue, { router, head, isClient }) {
     name: 'theme-color',
     content: '#10c186'
   })
+
+  head.meta.push({
+    property: 'og:image',
+    content: './favicon.png',
+  })
 }
