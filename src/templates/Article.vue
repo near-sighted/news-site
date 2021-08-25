@@ -30,7 +30,8 @@
 <page-query>
   query ($id: ID!) {
     entry : article(id: $id) {
-      title
+      title,
+      path,
       content,
       excerpt,
       createdAt(format:"Do MMMM YYYY"),
@@ -63,20 +64,19 @@ export default {
       titleDate: "",
     }
   },
-  
-
-
   metaInfo () {
     const parsedTitle = this.$page.entry.title.split('|')
     this.titlePlatform = parsedTitle[0]
     this.titleDate = parsedTitle[1]
+    console.log(this.$page.entry)
     return {
       title: this.$page.entry.title,
       meta: [
         { property: 'og:title', content: this.$page.entry.title },
+        { property: 'og:name', content: 'NEAR Sighted' },
         { property: 'og:description', content: this.$page.entry.excerpt },
         { property: 'og:image', content: '~/favicon.png' },
-        { property: 'og:url', content: 'https://nearsighted.news' },
+        { property: 'og:url', content: `https://nearsighted.news${this.$page.entry.path}` },
       ],
     };
   }
