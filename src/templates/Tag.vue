@@ -6,22 +6,34 @@
       </template>
       <template v-slot:content>
         <p class="text-4xl md:text-6xl">
-          #{{ $page.records.id }}
+          #{{ $page.records.title }}
         </p>
         <p
           class="text-lg md:text-2xl">
-          We have found {{ $page.records.belongsTo.totalCount }} records for this tag
+          We have found {{ $page.records.belongsTo.totalCount }} threads with this tag
         </p>
       </template>
     </PageHeader>
 
     <div class="container px-5 py-12 mx-auto">
       <section>
-        <div class="flex flex-wrap -m-4">
-          <RecordCard
+        <div class="flex flex-wrap justify-center -m-4">
+          <g-link
             v-for="edge in $page.records.belongsTo.edges"
+            :to="'/threads/' + edge.node.path"
             :key="edge.node.id"
-            :record="edge.node" />
+            class="inline-block md:w-1/2 lg:w-1/3 border-gray-200 border-2 m-2"
+          >
+           <div class="p-4">
+              <div class="mt-2 text-base md:text-lg">
+                {{ edge.node.title }}
+              </div>
+              <hr class="my-2"/>
+              <div class="mt-2 text-base md:text-lg text-gray-400">
+                {{ formatDate(edge.node.path) }}
+              </div>
+           </div>
+          </g-link>
         </div>
       </section>
       <div
@@ -37,11 +49,12 @@
 </template>
 
 <page-query>
-query ($id: ID!, $page:Int) {
+query ($id: ID!) {
   records : tag(id: $id) {
     id
-    title
-    belongsTo(perPage: 9, page: $page) @paginate {
+    title: name
+    path: slug
+    belongsTo {
       totalCount
       pageInfo {
         totalPages
@@ -50,21 +63,11 @@ query ($id: ID!, $page:Int) {
       edges {
         node {
           __typename
-          ... on News {
+          ...on Thread {
             id
-            title
-            path
-            excerpt
-            createdAt(format:"Do MMMM YYYY")
-            timeToRead
-          }
-          ... on Article {
-            id
-            title
-            path
-            excerpt
-            createdAt(format:"Do MMMM YYYY")
-            timeToRead
+            title: name
+            path: issueDate
+            date
           }
         }
       }
@@ -77,7 +80,7 @@ query ($id: ID!, $page:Int) {
 import PageHeader from '~/components/PageHeader'
 import RecordCard from '~/components/RecordCard'
 import Pagination from '~/components/Pagination'
-
+import moment from 'moment'
 export default {
   components: {
     PageHeader,
@@ -93,6 +96,11 @@ export default {
   computed: {
     baseUrl () {
       return `/tag/${this.$page.records.id}`
+    }
+  },
+  methods: {
+    formatDate (date) {
+      return moment(date).format('MMMM Do YYYY')
     }
   }
 };

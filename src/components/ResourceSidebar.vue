@@ -15,7 +15,7 @@
       </div>
       <div>
         <h3 class="border-b-4 pb-3 mb-3 border-gray-200 text-xl">
-          Filter by topic
+          Filter by type
         </h3>
         <ul class="pl-0">
           <li
@@ -127,10 +127,3 @@ export default {
   }
 };
 </script>
-
-<style>
-  a.active.active--exact {
-    color: #58a6ff;
-    font-weight: bold;
-  } 
-</style>

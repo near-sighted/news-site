@@ -34,11 +34,22 @@
           <p class="text-4xl">
             Search results for: {{ groupName }}
           </p>
-          <div class="flex flex-wrap -m-4">
-            <RecordCard
+          <div class="flex flex-wrap -m-4 my-4">
+            <div
               v-for="result in groupElements"
               :key="result.id"
-              :record="result.node" />
+              class="border-2 border-gray-200 m-2"
+            >
+              <g-link
+                :to="groupName == 'Tag' ? 'tags/' + result.node.slug : 'threads/' + result.node.issueDate"
+              >
+                <div class="w-full p-4">
+                  <h3>{{result.node.name}}</h3>
+                  <hr class="my-2"/>
+                  <p v-if="groupName == 'Thread'">{{formatDate(result.node.issueDate)}}</p>
+                </div>
+              </g-link>
+            </div>
           </div>
         </div>
         <div
@@ -85,9 +96,9 @@
 </template>
 
 <script>
-import RecordCard from '~/components/RecordCard'
+import ThreadCard from '~/components/ThreadCard'
 import PageHeader from '~/components/PageHeader'
-
+import moment from 'moment'
 // Source
 // https://gomakethings.com/a-vanilla-js-equivalent-of-lodashs-groupby-method/
 var groupBy = function (arr, criteria) {
@@ -110,7 +121,7 @@ var groupBy = function (arr, criteria) {
 
 export default {
   components: {
-    RecordCard,
+    ThreadCard,
     PageHeader
   },
   metaInfo: {
@@ -131,6 +142,9 @@ export default {
       if (searchTerm.length < 3) return []
       const results = this.$search.search({ query: searchTerm, limit: 5 })
       return groupBy(results, 'index')
+    },
+    formatDate (date) {
+      return moment(date).format('MMMM Do YYYY')
     }
   }
 }

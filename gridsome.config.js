@@ -22,18 +22,6 @@ var embedConfig = {
 
 };
 
-const path = require('path')
-
-function addStyleResource(rule) {
-  rule.use('style-resource')
-    .loader('style-resources-loader')
-    .options({
-      patterns: [
-        path.resolve(__dirname, './src/assets/scss/config/*.scss')
-      ],
-    })
-}
-
 module.exports = {
   siteName: 'NEAR Sighted',
   permalinks: {
@@ -57,42 +45,42 @@ module.exports = {
         tailwindConfig: './tailwind.config.js'
       }
     },
-    {
-      use: '@gridsome/source-filesystem',
-      options: {
-        typeName: 'CustomPage',
-        baseDir: './content/pages',
-        path: '*.md'
-      }
-    },
-    {
-      use: '@gridsome/source-filesystem',
-      options: {
-        typeName: 'Article',
-        baseDir: './content/articles',
-        path: '**/*.md',
-        refs: {
-          tags: {
-            typeName: 'Tag',
-            create: true
-          }
-        }
-      }
-    },
-    {
-      use: '@gridsome/source-filesystem',
-      options: {
-        typeName: 'News',
-        baseDir: './content/news',
-        path: '*.md',
-        refs: {
-          tags: {
-            typeName: 'Tag',
-            create: true
-          }
-        }
-      }
-    },
+    // {
+    //   use: '@gridsome/source-filesystem',
+    //   options: {
+    //     typeName: 'CustomPage',
+    //     baseDir: './content/pages',
+    //     path: '*.md'
+    //   }
+    // },
+    // {
+    //   use: '@gridsome/source-filesystem',
+    //   options: {
+    //     typeName: 'Article',
+    //     baseDir: './content/articles',
+    //     path: '**/*.md',
+    //     refs: {
+    //       tags: {
+    //         typeName: 'Tag',
+    //         create: true
+    //       }
+    //     }
+    //   }
+    // },
+    // {
+    //   use: '@gridsome/source-filesystem',
+    //   options: {
+    //     typeName: 'News',
+    //     baseDir: './content/news',
+    //     path: '*.md',
+    //     refs: {
+    //       tags: {
+    //         typeName: 'Tag',
+    //         create: true
+    //       }
+    //     }
+    //   }
+    // },
     {
       use: '@gridsome/source-filesystem',
       options: {
@@ -122,83 +110,106 @@ module.exports = {
     {
       use: 'gridsome-plugin-flexsearch',
       options: {
-        searchFields: ['title', 'excerpt', 'content'],
+        searchFields: ['name', 'date', 'tags'],
         collections: [
           {
-            typeName: 'Article',
-            indexName: 'Article',
-            fields: ['title', 'content', 'path']
+            typeName: 'Thread',
+            indexName: 'Thread',
+            fields: ['name', 'issueDate', 'date', 'tags'],
           },
           {
-            typeName: 'News',
-            indexName: 'News',
-            fields: ['title', 'content', 'path']
-          }
+            typeName: 'Tag',
+            indexName: 'Tag',
+            fields: ['name', 'slug']
+          },
+          // {
+          //   typeName: 'News',
+          //   indexName: 'News',
+          //   fields: ['name', 'content', 'path']
+          // }
         ]
       }
     },
     {
-      use: '@gridsome/plugin-google-analytics',
+      use: "@gridsome/source-airtable",
       options: {
-        id: (process.env.GA_ID ? process.env.GA_ID : 'XX-999999999-9')
-      }
-    }
+        // Add these to a .env file
+        // Details on finding these values can be found at:
+        // https://gridsome.org/plugins/@gridsome/source-airtable
+        apiKey: process.env.AIRTABLE_KEY, //required
+        baseId: process.env.AIRTABLE_BASE, //required
+        tables: [
+          {
+            name: "Conversations",
+            typeName: "Thread", //required - needs to match template name
+            select: {}, //optional
+            links: [
+              {
+                fieldName: "tags",
+                typeName: "Tag"
+              }
+            ], //optional
+
+          },
+          {
+            name: "Insights",
+            typeName: "Tag"
+          }
+
+        ],
+        tableName: "Conversations"
+      },
+    },
   ],
   templates: {
-    Article: [{
-      path: '/articles/:title'
-    }],
-    Tag: [
-      {
-        path: '/tag/:title',
-        component: './src/templates/Tag.vue'
-      }
-    ],
+    // Thread: [{
+    //   path: '/threads/:id'
+    // }],
+    // Tag: [
+    //   {
+    //     path: '/tag/:slug',
+    //     component: './src/templates/Tag.vue'
+    //   }
+    // ],
     // News: [
     //   {
-    //     path: '/news/:title',
+    //     path: '/news/:name',
     //     component: './src/templates/News.vue'
     //   }
     // ],
-    CustomPage: [
-      {
-        path: '/pages/:title',
-        component: './src/templates/CustomPage.vue'
-      }
-    ],
+    // CustomPage: [
+    //   {
+    //     path: '/pages/:name',
+    //     component: './src/templates/CustomPage.vue'
+    //   }
+    // ],
     ResourceType: [
       {
         name: 'resourcesByType',
-        path: '/resources/filter/type/:title',
-        component: './src/templates/ResourceTopicFilter.vue'
+        path: '/resources/filter/type/:name',
+        component: './src/templates/ResourceTypeFilter.vue'
       }
     ],
     ResourceTag: [
       {
         name: 'resourcesByType',
-        path: '/resources/filter/tag/:title',
+        path: '/resources/filter/tag/:name',
         component: './src/templates/ResourceTagFilter.vue'
       }
     ]
   },
   transformers: {
     remark: {
-      externalLinksTarget: "_blank",
-      externalLinksRel: ["nofollow", "noopener", "noreferrer"],
-      anchorClassName: "icon icon-link",
-      plugins:  ["gridsome-plugin-remark-container",
-                ['@noxify/gridsome-plugin-remark-embed', embedConfig],
-                'gridsome-plugin-remark-emoji',
-                ['gridsome-plugin-remark-prismjs-all', {
-                  noInlineHighlight: false,
-                  showLineNumbers: true
-                }]]
+      plugins: [
+        ['@noxify/gridsome-plugin-remark-embed', embedConfig],
+        ['gridsome-plugin-remark-prismjs-all', {
+          noInlineHighlight: false,
+          showLineNumbers: true
+        }]
+      ]
     }
   },
   chainWebpack: config => {
     config.resolve.alias.set('@customPageImage', '@/../content/pages');
-    const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
-    types.forEach(type => addStyleResource(config.module.rule('scss').oneOf(type)))
-
   }
 }

@@ -10,7 +10,7 @@
         </p>
         <p
           class="text-lg md:text-2xl">
-          Without these awesome folks and resources, we were not able to create our site!
+          Without these awesome guys, we were not able to create our site!
         </p>
       </template>
     </PageHeader>

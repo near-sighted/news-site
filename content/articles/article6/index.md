@@ -1,75 +1,97 @@
 ---
-title: DISCORD | WEEKLY ROUNDUP 08/16 - 08/22/21
-tags: discord, rust, assemblyscript, aurora, rainbowbridge, humanman, multitoken
-excerpt: Where is the NEARest entrance? Talk to me, computer!
-createdAt: 2021-08-23
---- 
-<!-- # DISCORD | WEEKLY ROUNDUP 2021-08-15 -> 2021-08-22 -->
-***
+title: Cum cupiditate tempore
+tags: tag2, tag3
+excerpt: Sit ab aliquid in mollitia eveniet corporis ut. Id alias natus eaque voluptas voluptates. Maxime in similique architecto minima et odio nihil tempore beatae. Autem et iusto voluptas fugit nesciunt facilis debitis eius amet. Ipsam est enim dicta deserunt deserunt repellat qui. Dolor omnis sit soluta est doloribus beatae voluptatum nisi.
+createdAt: 2019-11-05 11:26:00
+---
 
-## DEV-SUPPORT WEEKEND SUMMARY 
-- Aurora Deployment issues
-    -  [link](discord://discordapp.com/channels/490367152054992913/542945453533036544/878584137483710474) - With remix and truffle -
-        - suggest you ask in the Aurora Telegram group
-            See [aurora.dev](https://aurora.dev) website menu for the link to the dev Telegram channel supporting Aurora
-***
--  [link](discord://discordapp.com/channels/490367152054992913/542945453533036544/878590167957512202) - New Devs looking for intro tools to learn Near.
-    -  https://near.org/blog/the-beginners-guide-to-the-near-blockchain/
-    - https://awesomenear.com/categories/education/
-    - https://learnnear.club
-***
- 
- -   [link](discord://discordapp.com/channels/490367152054992913/542945453533036544/879047697498255452) - "Does `logging.log()` take up storage for the strings used for an error message? and do error messages from `assert(something, "some error message here");` use storage?"-
-        - Answer: 
-            - All code written in a smart contract will increase the size of your compiled WASM file, and thus will effect the amount of storage you will need when you deploy that contract.
-***
+## Ipsum fugit ab dolor nesciunt magnam
 
-## \#last weeks highlights
+**Pellentesque habitant morbi tristique** senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. _Aenean ultricies mi vitae est._ Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, `commodo vitae`, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. [Donec non enim](#) in turpis pulvinar facilisis. Ut felis.
 
-- Sputnik v2 Telegram chat helped a user locate 10,000 Near they thought they had lost. 
-    - Great job on helping them out with finding it in explorer.
-    - Opportunity for more explorer how-tos
+1.  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+2.  Aliquam tincidunt mauris eu risus.
 
+> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.
 
-***
-### DevRel Office Hours
+### Aliquid nihil laudantium debitis saepe
 
-:::info note
-NOW EVERY (M-F) from 11AM-12PM PST (6PM - 7PM UTC)
-lurkers welcome! :nerd_face:
-post your questions in #devrel-chat-office-hours
-any links mentioned in the chat can be found here the following day as well.
-:::
+*   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+*   Aliquam tincidunt mauris eu risus.
 
+```js{3,4,15-25}
 
+import {x, y} as p from 'point';
+const ANSWER = 42;
 
-***
-## Coming Events and Highlights
+class Car extends Vehicle {
+  constructor(speed, cost) {
+    super(speed);
 
+    var c = Symbol('cost');
+    this[c] = cost;
 
-#### - `Only 1 week away` from [MetaBUIDL](https://metabuidl.splashthat.com/edu) It's our duty to ensure it's open, secure, and in the power of the people. Time to METABUIDL with NEAR!
- - **1,000,000** in prizes & funding
- - Aug 27 - Sep 12
- - Open to all online participants. [link](https://metabuidl.splashthat.com/edu)
+    this.intro = `This is a car runs at
+      ${speed}.`;
+  }
+}
 
-***  
+for (let num of [1, 2, 3]) {
+  console.log(num + 0b111110111);
+}
 
-## Takeaways
-- Great community involvement both in assisting others with questions and lots of dev's creating.
-- Lots of new devs to NEAR and web3 joining the community.
-- More material on the similarities and differences from JavaScript for Solidity based devs coming to NEAR could be helpful. 
+function $initHighlight(block, flags) {
+  try {
+    if (block.className.search(/\bno\-highlight\b/) != -1)
+      return processBlock(block.function, true, 0x0F) + ' class=""';
+  } catch (e) {
+    /* handle exception */
+    var e4x =
+        <div>Example
+            <p>1234</p></div>;
+  }
+  for (var i = 0 / 2; i < classes.length; i++) {
+  // "0 / 2" should not be parsed as regexp
+    if (checkCondition(classes[i]) === undefined)
+      return /\d+[\s/]/g;
+  }
+  console.log(Array.every(classes, Boolean));
+}
 
-:::success
-#### Want to read whitepapers and docs faster with better comprehension? 🧐
+export  $initHighlight;
+```
 
-- try reading alot with text to voice feature on your browser set as fast as you can comfortably listen.
-- You will get a visual and audible memory of the information and it makes it easier to stay focused.
+#### Vero fugiat corrupti possimus sit voluptatem eos
 
-##### * Recommendations     
-   - I recommend turning it off for code blocks, charts and when it is lots of long numbers.
-   - Microsoft Edge is the easiest to use. Just right click at the start of the text and then click `Read out loud`. 
-- In Edge the voice Elvira sounds the most natural of the bunch.
-:::
+* List Element 1
+  * List Element 1-1
+  * List Element 1-2
+    * List Element 1-2-1
+    * List Element 1-2-2
+      * List Element 1-2-2-1
+    * List Element 1-2-3
+  * List Element 1-3
+* List Element 2
 
+### Porro et saepe alias ullam voluptatibus ut est
 
-###### tags: `discord`
+Corrupti quia qui eaque. Et qui rerum qui dolores. Quasi doloribus ut omnis. Libero laudantium libero placeat dignissimos dolor provident ratione. 
+Dignissimos ut consequatur iste. Iusto rerum dignissimos labore. Vel officiis quisquam quos est enim tenetur. Facilis temporibus error nisi. 
+
+Incidunt illo voluptatem ad. Sit qui dolorem quas et ut earum eum tenetur. Qui rerum temporibus temporibus quibusdam. Aliquid delectus quae repudiandae illo rerum. Amet ipsa quia placeat consectetur temporibus facere dolores adipisci pariatur. Quo qui voluptatibus non.
+
+## Eum eveniet optio neque
+
+### Est excepturi quia molestiae aut
+
+Corrupti quia qui eaque. Et qui rerum qui dolores. Quasi doloribus ut omnis. Libero laudantium libero placeat dignissimos dolor provident ratione. 
+Dignissimos ut consequatur iste. Iusto rerum dignissimos labore. Vel officiis quisquam quos est enim tenetur. Facilis temporibus error nisi. 
+
+Incidunt illo voluptatem ad. Sit qui dolorem quas et ut earum eum tenetur. Qui rerum temporibus temporibus quibusdam. Aliquid delectus quae repudiandae illo rerum. Amet ipsa quia placeat consectetur temporibus facere dolores adipisci pariatur. Quo qui voluptatibus non.
+
+### Maiores tempora repellendus et
+
+Corrupti quia qui eaque. Et qui rerum qui dolores. Quasi doloribus ut omnis. Libero laudantium libero placeat dignissimos dolor provident ratione. 
+Dignissimos ut consequatur iste. Iusto rerum dignissimos labore. Vel officiis quisquam quos est enim tenetur. Facilis temporibus error nisi. 
+
+Incidunt illo voluptatem ad. Sit qui dolorem quas et ut earum eum tenetur. Qui rerum temporibus temporibus quibusdam. Aliquid delectus quae repudiandae illo rerum. Amet ipsa quia placeat consectetur temporibus facere dolores adipisci pariatur. Quo qui voluptatibus non.

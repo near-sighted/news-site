@@ -14,30 +14,22 @@
       </template>
     </PageHeader>
     <div class="container text-center mx-auto">
-      <SectionLatestArticles />
+      <SectionLatestThreads />
     </div>
-
+<!-- 
     <SectionContribute />
 
-    <SectionCutThroughNoise />
+    <SectionCutThroughNoise /> -->
     
-    <!-- <div class="container text-center mx-auto">
-      <SectionLatestNews />
-    </div> -->
-
-    
-
-    <!-- <SectionOpenSource /> -->
   </Layout>
 </template>
 
 <script>
 import PageHeader from '~/components/PageHeader'
-import SectionLatestArticles from '~/components/sections/LatestArticles'
+import SectionLatestThreads from '~/components/sections/LatestThreads'
 // import SectionLatestNews from '~/components/sections/LatestNews'
 import SectionContribute from '~/components/sections/Contribute'
 import SectionCutThroughNoise from '~/components/sections/CutThroughNoise'
-// import SectionOpenSource from '~/components/sections/OpenSource'
 
 export default {
   metaInfo: {
@@ -45,11 +37,10 @@ export default {
   },
   components: {
     PageHeader,
-    SectionLatestArticles,
+    SectionLatestThreads,
     // SectionLatestNews,
     SectionContribute,
-    SectionCutThroughNoise,
-    // SectionOpenSource
+    SectionCutThroughNoise
   }
 };
 </script>

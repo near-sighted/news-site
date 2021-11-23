@@ -7,18 +7,6 @@
 
 @import './prism.scss';
 
-body {
-  &.bright {
-    background: $backgroundBright;
-    color: $textBright;
-  }
-
-  &.dark {
-    background: $backgroundDark;
-    color: $textDark;
-  }
-}
-
 // Remove top margin from the first element
 .content > *:first-child {
     @apply mt-0;
@@ -38,7 +26,7 @@ body {
     }
 
     .active--exact {
-        @apply text-smalt-blue-500;        
+        @apply text-smalt-blue-500;
     }
 }
 

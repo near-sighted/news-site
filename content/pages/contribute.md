@@ -1,25 +1,38 @@
 ---
 title: Contribute
-subtitle: Earn $NEAR and help developers by summarizing the day's highlights
+subtitle: What you give, is what you get
 image: dustin-lee-jLwVAUtLOAQ-unsplash.jpg
 sidebar: true
 ---
 
 ## General
 
-Who you are
+Why should you contribute to the site repository?
 
-* A developer (helps, but not required) who practically lives on NEAR's Discord server
-* You want to help NEAR become the standard in web3 technology
-* You know you're way around a markdown file
-* You have great ideas for stories related to NEAR, and welcome feedback.
+* You want to create/update an article/news entry
+* You want to create/update a resource
+* You have found a bug and you want to fix it
+* You have found a typo in our site
+* We missed you in the credits list - sorry :(
 
+Whatever the reason is - Thank you!
 
 ### Prerequisites
 
-  * active in NEAR community
-  * knowledge of NEAR resources (docs, repos, dApps)
-  
+* NodeJS (v8.3+)
+* Yarn or NPM
+
+### Where is the content stored
+
+* News - `/content/news`
+* Articles - `/content/articles`
+* Resources - `/content/resources`
+* Credits - `/content/credits`
+
 ## How to contribute
 
-   * Reach out to  `Ben | NEAR`  in [Discord](https://discord.com/invite/UY9Xf2k)  
+1. Clone ( or fork ) our [website repository](https://github.com/username/reponame)
+2. Install the required dependencies via `yarn` or `npm install`
+3. Run `gridsome develop` to have a local preview
+4. Create a new news/article/resource entry
+6. Create a pull request 

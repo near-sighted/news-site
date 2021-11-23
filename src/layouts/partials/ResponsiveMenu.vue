@@ -41,16 +41,14 @@
             exact>
             Resources
           </g-link>
-        </li>
-        <!-- <li>
+        </li><li>
           <g-link
             to="/news"
             class="inline-block mb-5"
             exact>
             News
           </g-link>
-        </li> -->
-        <li>
+        </li><li>
           <g-link
             to="/pages/contribute"
             class="inline-block mb-5"

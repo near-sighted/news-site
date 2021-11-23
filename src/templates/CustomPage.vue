@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <!-- <Layout>
     <PageHeader>
       <template
         v-if="$page.entry.image !== null"
@@ -38,16 +38,15 @@
         </div>
       </div>
     </div>
-  </Layout>
+  </Layout> -->
 </template>
 
 <page-query>
   query ($id: ID!) {
     entry : customPage(id: $id) {
-      title
+      name
       subtitle
       image
-      content
       sidebar
       headings {
         depth,

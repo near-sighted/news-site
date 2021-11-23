@@ -1,121 +1,97 @@
 ---
-title: DISCORD | Tuesday, 2021-08-17
-tags: discord, assemblyscript, gas, indexer
-excerpt: More DevRel Office Hours! Is AssemblyScript GASlighting me??
-createdAt: 2021-08-17
+title: Est earum quaerat molestias natus deleniti quos culpa eum
+tags: ['tag3', 'tag4']
+excerpt: Dolore harum rem. Ut aut non accusamus. Autem corrupti ut laborum omnis. Ut necessitatibus iusto aliquam.
+createdAt: 2019-11-02 11:26:00
 ---
- 
 
+## Ipsum fugit ab dolor nesciunt magnam
 
-## Summary of various Discord channels, issues, and topics for a 24 hour period (12am-12am EST)
+**Pellentesque habitant morbi tristique** senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. _Aenean ultricies mi vitae est._ Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, `commodo vitae`, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. [Donec non enim](#) in turpis pulvinar facilisis. Ut felis.
 
-:::important update
-We are focusing our detailing efforts just on **#dev-support** channel activity right now until more contributors join the NEAR Sighted team :person_doing_cartwheel: :person_doing_cartwheel: :person_doing_cartwheel: 
-:::
+1.  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+2.  Aliquam tincidunt mauris eu risus.
 
-:::info note
-The "Unanswered Questions" in these summaries don't mean they were _never_ answered, just not on the same date they were posted.
-:::
+> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.
 
+### Aliquid nihil laudantium debitis saepe
 
+*   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+*   Aliquam tincidunt mauris eu risus.
 
-### \#dev-support
+```js{3,4,15-25}
 
-  - [near-api-js Error with cli calls working but getting errors on the frontend.](https://discord.com/channels/490367152054992913/542945453533036544/876874330036903936)
-    - the [docs](https://docs.near.org/docs/api/naj-quick-reference#call-contract) have a great reference for basic usage of  near-api-js . 
-    - Basically, your first argument in your contract method is an object that's either empty or containing required parameters. 
-    - Gas is your second argument and it's in yoctoⓃ (10^24 ). 
-    - Finally, you have an optional 3rd argument, also in  yoctoⓃ that's the deposit. 
-    - ```typescript
-      await contract.method_name(
-        {
-          arg_name: "value", // argument name and value - pass empty object if no args required
-        },
-        300000000000000, // attached GAS (optional)
-        1000000000000000000000000 // attached deposit in yoctoNEAR (optional)
-      );
-      ```
-  
-        
-  - **Unanswered questions**
+import {x, y} as p from 'point';
+const ANSWER = 42;
 
-    - [explorer - Issue with "Not Started" status for 10 days](https://discord.com/channels/490367152054992913/542945453533036544/877062155797671937)
-    
-    - [ indexer - 2 part question:](discord://discordapp.com/channels/490367152054992913/542945453533036544/877090086443954216)
-      - "Do we have nodejs library for near indexer, i only found rust version for it?" 
-      - "Could I only monitor the states of some specified contracts with indexer?"
+class Car extends Vehicle {
+  constructor(speed, cost) {
+    super(speed);
 
+    var c = Symbol('cost');
+    this[c] = cost;
 
-    - [AS - Contract throwing error: "WebAssembly trap: memory out of bounds trap"](discord://discordapp.com/channels/490367152054992913/542945453533036544/877258365053595648)
+    this.intro = `This is a car runs at
+      ${speed}.`;
+  }
+}
 
-    
-    - [AS - User having issues after 'yarn && yarn asbuild' getting the following error](discord://discordapp.com/channels/490367152054992913/542945453533036544/877041122332012575)
+for (let num of [1, 2, 3]) {
+  console.log(num + 0b111110111);
+}
 
+function $initHighlight(block, flags) {
+  try {
+    if (block.className.search(/\bno\-highlight\b/) != -1)
+      return processBlock(block.function, true, 0x0F) + ' class=""';
+  } catch (e) {
+    /* handle exception */
+    var e4x =
+        <div>Example
+            <p>1234</p></div>;
+  }
+  for (var i = 0 / 2; i < classes.length; i++) {
+  // "0 / 2" should not be parsed as regexp
+    if (checkCondition(classes[i]) === undefined)
+      return /\d+[\s/]/g;
+  }
+  console.log(Array.every(classes, Boolean));
+}
 
+export  $initHighlight;
+```
 
+#### Vero fugiat corrupti possimus sit voluptatem eos
 
-### \#support
-  - [wallet - Wallet not displaying account](discord://discordapp.com/channels/490367152054992913/765606694125436948/877587476749905983) 
-    - user directed to zendesk.
-    - user wanted to continue debugging, but suggested error was related to SSL protocol.
-    - user asked to post solutions and further concerns in #dev-support and #near-wallet-dev
+* List Element 1
+  * List Element 1-1
+  * List Element 1-2
+    * List Element 1-2-1
+    * List Element 1-2-2
+      * List Element 1-2-2-1
+    * List Element 1-2-3
+  * List Element 1-3
+* List Element 2
 
+### Porro et saepe alias ullam voluptatibus ut est
 
-  - ["Does NEAR have any DEXs in which I can sell near for USDC or ETH and then bridge to ETH?"](discord://discordapp.com/channels/490367152054992913/765606694125436948/877620094895816704) 
-    - pointed to https://app.ref.finance/ 
-    - might still be under maintenance from fallout of recent hack.
+Corrupti quia qui eaque. Et qui rerum qui dolores. Quasi doloribus ut omnis. Libero laudantium libero placeat dignissimos dolor provident ratione. 
+Dignissimos ut consequatur iste. Iusto rerum dignissimos labore. Vel officiis quisquam quos est enim tenetur. Facilis temporibus error nisi. 
 
-  - [AS - "How does paying for GAS work for view calls?"](https://discord.com/channels/490367152054992913/542945453533036544/877357927172800513)
-    - Although not answered in the thread, this was brought up in DevRel Office Hours
-      - view calls _do_ in fact use GAS.
-      - Currently, NEAR is fronting the cost of GAS for view calls
-      - View calls won't appear in explorer as transactions, because they do not update state, and therefore are not added to the chain.
+Incidunt illo voluptatem ad. Sit qui dolorem quas et ut earum eum tenetur. Qui rerum temporibus temporibus quibusdam. Aliquid delectus quae repudiandae illo rerum. Amet ipsa quia placeat consectetur temporibus facere dolores adipisci pariatur. Quo qui voluptatibus non.
 
+## Eum eveniet optio neque
 
+### Est excepturi quia molestiae aut
 
+Corrupti quia qui eaque. Et qui rerum qui dolores. Quasi doloribus ut omnis. Libero laudantium libero placeat dignissimos dolor provident ratione. 
+Dignissimos ut consequatur iste. Iusto rerum dignissimos labore. Vel officiis quisquam quos est enim tenetur. Facilis temporibus error nisi. 
 
-## Highlights
-  - [DevRel office hours were such a success that they will now hold them daily! :trophy: ](discord://discordapp.com/channels/490367152054992913/708307442491981849/877612128486453268)
-      - (M-F) from 11AM-12PM PST (6PM - 7PM UTC)
-      - lurkers welcome! :nerd_face: 
-      - new channel, _#devrel-chatski_, added.
-          - post your questions for the office hours team to answer live.
-          - any links mentioned in the chat can be found here as well.
+Incidunt illo voluptatem ad. Sit qui dolorem quas et ut earum eum tenetur. Qui rerum temporibus temporibus quibusdam. Aliquid delectus quae repudiandae illo rerum. Amet ipsa quia placeat consectetur temporibus facere dolores adipisci pariatur. Quo qui voluptatibus non.
 
-  - [discussion and confirmation majority of the time 'you should use context.predecessor and not sender'](discord://discordapp.com/channels/490367152054992913/542945453533036544/877216978308325427)
+### Maiores tempora repellendus et
 
+Corrupti quia qui eaque. Et qui rerum qui dolores. Quasi doloribus ut omnis. Libero laudantium libero placeat dignissimos dolor provident ratione. 
+Dignissimos ut consequatur iste. Iusto rerum dignissimos labore. Vel officiis quisquam quos est enim tenetur. Facilis temporibus error nisi. 
 
-
-  - **Errors**
-  
-    - Here's a summary of a user who posted their issue, and, later, their solution.  
-      - [AS - User having issues after 'yarn && yarn asbuild' getting the following error](discord://discordapp.com/channels/490367152054992913/542945453533036544/877041122332012575)
-      
-        - ```typescript
-          ERROR TS2304: Cannot find name 'null'.
-
-            valueOf(): null {
-                        ~~~~
-          in assembly/JSON.ts(264,14)
-          ```
-        - tried to fix it with: 
-        - ```typescript
-          vote.map_participants_voted.contains(userId)
-          ``` 
-        - the problem. 
-          - `vote.map_participants_voted` is declared like: `public map_participants_voted: PersistentMap<UserId, bool>;` and UserId is just a string type.
-
-        - user's working solution:
-          - `Solution simply create a new object to interact with `
-
-     
-
-## Takeaways
-- Syntax errors seem to be most common especially with AS users. 
-  - There is a sense that AS should "behave" more like javascript since it looks and _feels_ like it.
-  - AS has no event loop, and is _very_ limited in what it has available to the user.
-    - New devs coming from javascript often struggle with this concept and the runtime of a `wasm`. What is the future of AssemblyScript - the little javascript dialect that could.
-- Frequent wallet issues come up, and are mostly directed to zendesk.
-  - For devs, #near-wallet-dev is a great channel to check for wallet updates, and to reach members of the wallet team.
-
-
+Incidunt illo voluptatem ad. Sit qui dolorem quas et ut earum eum tenetur. Qui rerum temporibus temporibus quibusdam. Aliquid delectus quae repudiandae illo rerum. Amet ipsa quia placeat consectetur temporibus facere dolores adipisci pariatur. Quo qui voluptatibus non.

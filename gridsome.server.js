@@ -9,48 +9,46 @@ module.exports = function (api) {
   /**
    * Manipulates the given excerpt
    */
-  api.loadSource(({
-    addSchemaResolvers
-  }) => {
-    addSchemaResolvers({
-      Article: {
-        excerpt (obj) {
-          var longText = (obj.excerpt.length > 200) ? '...' : '';
-          return obj.excerpt.replace(/^(.{200}[^\s]*).*/, '$1' + longText);
-        }
-      },
-      News: {
-        excerpt (obj) {
-          var longText = (obj.excerpt.length > 200) ? '...' : '';
-          return obj.excerpt.replace(/^(.{200}[^\s]*).*/, '$1' + longText);
-        }
-      }
-    });
+  api.loadSource((addSchemaResolvers) => {
+  //   addSchemaResolvers({
+  //     Article: {
+  //       excerpt (obj) {
+  //         var longText = (obj.excerpt.length > 200) ? '...' : '';
+  //         return obj.excerpt.replace(/^(.{200}[^\s]*).*/, '$1' + longText);
+  //       }
+  //     },
+  //     // News: {
+  //     //   excerpt (obj) {
+  //     //     var longText = (obj.excerpt.length > 200) ? '...' : '';
+  //     //     return obj.excerpt.replace(/^(.{200}[^\s]*).*/, '$1' + longText);
+  //     //   }
+  //     // }
+  //   });
   });
 
   api.onCreateNode(options => {
-    if (options.internal.typeName === 'Article') {
-      options.recordType = options.internal.typeName;
-      options.tags = (typeof options.tags === 'string') ? options.tags.split(',').map(string => string.trim()) : options.tags;
-      return {
-        ...options
-      };
-    }
+    // if (options.internal.typeName === 'Article') {
+    //   options.recordType = options.internal.typeName;
+    //   options.tags = (typeof options.tags === 'string') ? options.tags.split(',').map(string => string.trim()) : options.tags;
+    //   return {
+    //     ...options
+    //   };
+    // }
 
-    if (options.internal.typeName === 'News') {
-      options.recordType = options.internal.typeName;
-      options.tags = (typeof options.tags === 'string') ? options.tags.split(',').map(string => string.trim()) : options.tags;
-      return {
-        ...options
-      };
-    }
+    // if (options.internal.typeName === 'News') {
+    //   options.recordType = options.internal.typeName;
+    //   options.tags = (typeof options.tags === 'string') ? options.tags.split(',').map(string => string.trim()) : options.tags;
+    //   return {
+    //     ...options
+    //   };
+    // }
 
-    if (options.internal.typeName === 'Tag') {
-      options.recordType = options.internal.typeName;
-      return {
-        ...options
-      };
-    }
+    // if (options.internal.typeName === 'Tag') {
+    //   options.recordType = options.internal.typeName;
+    //   return {
+    //     ...options
+    //   };
+    // }
 
     if (options.internal.typeName === 'Resource') {
       options.recordType = options.internal.typeName;
@@ -61,12 +59,71 @@ module.exports = function (api) {
       };
     }
 
-    if (options.internal.typeName === 'CustomPage') {
-      options.recordType = options.internal.typeName;
-      options.sidebar = !!(options.sidebar);
-      return {
-        ...options
-      };
-    }
+    // if (options.internal.typeName === 'CustomPage') {
+    //   options.recordType = options.internal.typeName;
+    //   options.sidebar = !!(options.sidebar);
+    //   return {
+    //     ...options
+    //   };
+    // }
   });
+
+  api.createPages(async ({ graphql, createPage }) => {
+    const thread = await graphql(`{
+      allThread (filter: {date: {gte: "2021-10-14"}}){
+        edges {
+          node {
+            id
+            path: issueDate
+            summaryComplete
+          }
+        }
+      }
+    }`)
+
+    thread.data.allThread.edges.forEach(({ node }) => {
+      createPage({
+        path: `/threads/${node.path}`,
+        component: './src/pages/Threads.vue',
+        context: {
+          id: node.id,
+          path: node.path,
+          date: node.path,
+          summaryComplete: node.summaryComplete
+        }
+      })
+
+    })
+
+
+
+    const tag = await graphql(`{
+      allTag (filter: {pastTwoWeeks: {gt: 0}}) {
+        edges {
+          node {
+            id
+            name
+            path: slug
+            pastTwoWeeks
+          }
+        }
+      }
+    }`)
+
+
+
+    tag.data.allTag.edges.forEach(({ node }) => {
+      createPage({
+        path: `/tags/${node.path}`,
+        component: './src/templates/Tag.vue',
+        context: {
+          id: node.id,
+          name: node.name,
+          path: node.path
+        }
+      })
+
+    })
+
+  })
 }

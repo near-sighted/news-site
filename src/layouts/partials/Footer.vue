@@ -24,9 +24,9 @@
             Sample Page 2
           </g-link> -->
 
-          <g-link to="/credits">
+          <!-- <g-link to="/credits">
             Credits
-          </g-link>
+          </g-link> -->
         </div>
       </div>
     </div>

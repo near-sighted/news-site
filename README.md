@@ -1,22 +1,22 @@
 <div align="center">
 
-<a href="https://www.nearsighted.news" title="NEAR Sighted" target="_blank">
+<a href="https://www.jammeryhq.com" title="JammeryHQ" target="_blank">
 
-  <img src="https://i.imgur.com/bhNHEiI.png" width="128" />
+  <img src="https://jammeryhq.com/jammeryhq.png" width="128" />
   
 </a>
 
 <p>
-NEAR Sighted. Community Awareness. See what we see. 
+Fast-track your JAMstack development & learning
 </p>
 </div>
 
 <hr />
 
-## What Are we?
+## About the starter
 
-* Daily summaries of developer related activity happening in NEAR ecosystem (Discord, Telegram, StackOverflow, Twitter)
-* Highlights of dev-related questions and answers with helpful snippets of code, tips, links, and other resources to help you on your journey to building on [NEAR](https://near.org).
+Gridsome starter that is ideal for articles/tutorials that uses markdown for the content and Tailwind CSS for the styles.
+
 ## Key features
 
 * Built with Tailwind CSS
@@ -24,11 +24,13 @@ NEAR Sighted. Community Awareness. See what we see.
 * Fulltext search
 * Dynamic custom pages
 * Pagination
+* Different content types for articles and news
 * Syntax Highlighting via PrismJS
 
-## Credits
+## Installation
 
-created by [Ben Sayeg] 
+Run the following command to create a new gridsome project 
 
-Built with [Gridsome](https://github.com/jammeryhq/gridsome-starter-articles)
-
+```
+gridsome create my-blog https://github.com/jammeryhq/gridsome-starter-articles
+```

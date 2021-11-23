@@ -5,22 +5,17 @@
     <div
       class="h-full border-2 border-gray-200 rounded-lg overflow-hidden relative hover:bg-shark-50 hover:bg-opacity-60">
       <div class="p-6">
-        <g-link
-          :to="record.path"
-          class="text-smalt-blue-500 hover:text-black inline-flex items-center">
-          <h1
-            class="title-font text-2xl font-medium text-gray-900 mb-3"
-            :class="{'mb-12' : !record.tags}">
-            {{ record.formattedDate }}
-          </h1>
-        </g-link>
+        <h1
+          class="title-font text-2xl font-medium text-gray-900 mb-3"
+          :class="{'mb-12' : !thread.tags}">
+          {{ thread.title }}
+        </h1>
         <hr class="my-4"/>
-        <TagLink v-if="record.tagsMetadata" :tags="record.tagsMetadata" class="mt-4 mb-12"/>
-        <div class="flex items-center flex-wrap absolute bottom-0 -ml-6 p-6 w-full mt-10">
+        <!-- <div class="flex items-center flex-wrap absolute bottom-0 -ml-6 p-6 w-full mt-10">
           <div class="w-2/3 text-left">
             <slot name="link">
               <g-link
-                :to="record.path"
+                :to="thread.path"
                 class="text-smalt-blue-500 hover:text-black inline-flex items-center">
                 Continue reading
                 <svg
@@ -36,15 +31,14 @@
                 </svg>
               </g-link>
             </slot>
-          </div>
+          </div> -->
           <div
             <ThreadDetails 
-              v-if="record.tags && !record.tagsMetadata"
-              :thread="record"
+              :thread="thread"
             />
           </div>
-          <div
-            v-if="record.timeToRead"
+          <!-- <div
+            v-if="thread.timeToRead"
             class="w-1/3 text-right pt-2">
             <span class="text-gray-600 inline-flex items-center leading-none text-sm">
               <svg
@@ -58,9 +52,9 @@
                   stroke-linejoin="round"
                   stroke-width="2"
                   d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg> {{ record.timeToRead }} min
+              </svg> {{ thread.timeToRead }} min
             </span>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -76,7 +70,7 @@ export default {
       type: String,
       default: 'sm:w-1/2 lg:w-1/3'
     },
-    record: {
+    thread: {
       type: Object,
       default () {
         return {}
@@ -89,3 +83,5 @@ export default {
   }
 };
 </script>
+
+
