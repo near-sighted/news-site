@@ -22,7 +22,7 @@
 
 <static-query>
   query {
-    records: allThread(filter: {date: {gte: "2021-10-14"}}sortBy:"date") {
+    records: allThread(filter: {date: {gte: "2021-10-14"}}, sortBy:"date") {
       edges {
         node {
           id
@@ -37,6 +37,7 @@
           channelName
           channelId
           status
+          ignoreConversation
         }
       }
     }
@@ -56,7 +57,10 @@ export default {
     // }
     groupedByDate() {
       let records = {}
-      this.$static.records.edges.forEach(el => {
+      // TODO: filter out records that are ignored
+      let filteredRecords = this.$static.records.edges.filter(el => el.node.ignoreConversation !== true && el.node.channelId == '542945453533036544' && el.node.status !== 'Not Enough Information')
+      
+      filteredRecords.forEach(el => {
         
         if(!el.node.tags.length) return
         records[el.node.path] = records[el.node.path] || {}

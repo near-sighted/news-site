@@ -98,7 +98,7 @@ module.exports = function (api) {
 
 
     const tag = await graphql(`{
-      allTag (filter: {pastTwoWeeks: {gt: 0}}) {
+      allTag {
         edges {
           node {
             id
@@ -109,6 +109,18 @@ module.exports = function (api) {
         }
       }
     }`)
+    // const tag = await graphql(`{
+    //   allTag (filter: {pastTwoWeeks: {gt: 0}}) {
+    //     edges {
+    //       node {
+    //         id
+    //         name
+    //         path: slug
+    //         pastTwoWeeks
+    //       }
+    //     }
+    //   }
+    // }`)
 
 
 
