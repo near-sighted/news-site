@@ -69,6 +69,7 @@ module.exports = function (api) {
   });
 
   api.createPages(async ({ graphql, createPage }) => {
+
     const thread = await graphql(`{
       allThread (filter: {date: {gte: "2021-10-14"}}){
         edges {
@@ -126,7 +127,7 @@ module.exports = function (api) {
 
     tag.data.allTag.edges.forEach(({ node }) => {
       createPage({
-        path: `/tags/${node.path}`,
+        path: `/tags/${node.path.toLowerCase()}`,
         component: './src/templates/Tag.vue',
         context: {
           id: node.id,
