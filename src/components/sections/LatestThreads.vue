@@ -5,9 +5,11 @@
         <h2 class="text-4xl">
           Latest Threads
         </h2>
-        <p
-          class="text-2xl">
-          Curious what's been talked about in DISCORD, lately? Check out some of the highlight.
+        <p class="text-2xl mt-3">
+          Curious what's been talked about in DISCORD, lately? 
+        </p>
+        <p class="text-2xl mt-3">
+          Check out some of the highlights from the last few days.
         </p>
       </div>
       <div class="flex flex-wrap -m-4">
@@ -22,7 +24,7 @@
 
 <static-query>
   query {
-    records: allThread(filter: {date: {gte: "2021-10-14"}}, sortBy:"date") {
+    records: allThread(limit: 40) {
       edges {
         node {
           id
@@ -37,7 +39,6 @@
           channelName
           channelId
           status
-          ignoreConversation
         }
       }
     }
@@ -57,15 +58,14 @@ export default {
     // }
     groupedByDate() {
       let records = {}
-      // TODO: filter out records that are ignored
-      let filteredRecords = this.$static.records.edges.filter(el => el.node.ignoreConversation !== true && el.node.channelId == '542945453533036544' && el.node.status !== 'Not Enough Information')
-      
-      filteredRecords.forEach(el => {
+      this.$static.records.edges.forEach(el => {
         
         if(!el.node.tags.length) return
         records[el.node.path] = records[el.node.path] || {}
+        records[el.node.path].threadCount = records[el.node.path].threadCount || 0
         records[el.node.path].path = records[el.node.path].path || `/threads/${el.node.path}`
         records[el.node.path].formattedDate = records[el.node.path].formattedDate || moment(el.node.date).format('MMMM Do, YYYY')
+        records[el.node.path].threadCount += 1
         records[el.node.path].tags = records[el.node.path].tags || new Set()
         for (let tag of el.node.tags) {
           let formattedTag = tag.title.replace(/[(\s+)(.)]/g, '').toLowerCase()
@@ -89,7 +89,7 @@ export default {
       }
       console.log(records)
       return records
-    }
+    } 
   }
 
 };

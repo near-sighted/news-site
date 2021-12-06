@@ -142,7 +142,7 @@ module.exports = {
           {
             name: "Conversations",
             typeName: "Thread", //required - needs to match template name
-            select: {}, //optional
+            select: {"view" : "gridsome-source-airtable"}, //optional
             links: [
               {
                 fieldName: "tags",
@@ -153,7 +153,8 @@ module.exports = {
           },
           {
             name: "Insights",
-            typeName: "Tag"
+            typeName: "Tag",
+            select: { "view": "gridsome-source-airtable" }
           }
 
         ],
