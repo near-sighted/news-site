@@ -1,26 +1,30 @@
 <template>
-  <div
-    class="flex h-screen items-center">
-    <div class="container mx-auto">
-      <div class="error text-center">
-        <h1 class="mb-4 h-56 headline text-smalt-blue-500">
-          404
-        </h1>
-        <p class="text-6xl text-gray-700">
-          Page not found!
-        </p>
+  <div>
+    <div
+      class="flex h-screen items-center">
+      <div class="container mx-auto">
+        <div class="error text-center">
+          <h1 class="mb-4 h-56 headline text-smalt-blue-500">
+            404
+          </h1>
+          <p class="text-6xl text-gray-700">
+            Page not found!
+          </p>
 
-        <g-link
-          class=" bg-smalt-blue-500 rounded p-4 text-white hover:bg-smalt-blue-400 hover:text-gray-900 transition-colors duration-200"
-          tabindex="-1"
-          role="button"
-          aria-disabled="true"
-          to="/">
-          Back to home
-        </g-link>
+          <g-link
+            class=" bg-smalt-blue-500 rounded p-4 text-white hover:bg-smalt-blue-400 hover:text-gray-900 transition-colors duration-200"
+            tabindex="-1"
+            role="button"
+            aria-disabled="true"
+            to="/">
+            Back to home
+          </g-link>
+        </div>
       </div>
     </div>
-     <Vssue title="404" />
+    <div>
+      <Vssue title="404" />
+    </div>
   </div>
 </template>
 
