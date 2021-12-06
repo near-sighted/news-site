@@ -19,7 +19,7 @@
           :record="record" />
       </div>
     </div>
-    <Vssue title="Home Page" />
+    <Vssue title="Latest Threads"/>
   </section>
 </template>
 
