@@ -20,6 +20,7 @@
         </g-link>
       </div>
     </div>
+     <Vssue title="404" />
   </div>
 </template>
 

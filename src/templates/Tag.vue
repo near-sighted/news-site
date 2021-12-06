@@ -45,6 +45,7 @@
           :total-pages="$page.records.belongsTo.pageInfo.totalPages" />
       </div>
     </div>
+    <Vssue title="Tags" />
   </Layout>
 </template>
 
