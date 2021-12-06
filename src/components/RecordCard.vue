@@ -14,6 +14,7 @@
             {{ record.formattedDate }}
           </h1>
         </g-link>
+        <p>{{ record.threadCount}} threads</p>
         <hr class="my-4"/>
         <TagLink v-if="record.tagsMetadata" :tags="record.tagsMetadata" class="mt-4 mb-12"/>
         <div class="flex items-center flex-wrap absolute bottom-0 -ml-6 p-6 w-full mt-10">
