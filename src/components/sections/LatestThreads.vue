@@ -19,6 +19,7 @@
           :record="record" />
       </div>
     </div>
+    <Vssue title="Home Page" />
   </section>
 </template>
 

@@ -26,6 +26,7 @@
             :record="record" />
         </div>
       </section>
+      <Vssue title="All Threads" />
       <!-- <div
         v-if="$page.records.pageInfo.totalPages > 1"
         class="mt-12 flex justify-center">
@@ -39,7 +40,7 @@
 </template>
 <page-query>
   query thread {
-    threads: allThread  (sort: [{ by: "date", order: DESC }, { by: "name", order: ASC }]) {
+    threads: allThread(sort: [{ by: "date", order: DESC }, { by: "name", order: ASC }]) {
       edges {
         node {
           id

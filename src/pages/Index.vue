@@ -20,7 +20,6 @@
     <SectionContribute />
 
     <SectionCutThroughNoise /> -->
-    
   </Layout>
 </template>
 

@@ -26,20 +26,13 @@
             :thread="item.node" />
         </div>
       </section>
-      <!-- <div
-        v-if="$page.records.pageInfo.totalPages > 1"
-        class="mt-12 flex justify-center">
-        <Pagination
-          base-url="/threads"
-          :current-page="$page.records.pageInfo.currentPage"
-          :total-pages="$page.records.pageInfo.totalPages" />
-      </div> -->
     </div>
+    <Vssue title="Threads By Date" />
   </Layout>
 </template>
 <page-query>
   query thread {
-    threads: allThread  (sort: [{ by: "date", order: DESC }, { by: "name", order: ASC }]) {
+    threads: allThread (sort: [{ by: "date", order: DESC }, { by: "name", order: ASC }]) {
       edges {
         node {
           id
@@ -105,7 +98,9 @@ export default {
     },
     // applying multiple to the query
     focusedThreads() { 
-      return this.$page.threads.edges
+      return this.$page.threads.edges.filter(({ node }) => {
+        return node.path === this.$context.path
+      })
     } 
   }
 };

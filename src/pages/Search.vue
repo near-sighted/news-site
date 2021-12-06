@@ -91,6 +91,7 @@
           </div>
         </div>
       </section>
+      <Vssue title="Search" />
     </div>
   </Layout>
 </template>
