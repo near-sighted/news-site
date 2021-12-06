@@ -18,18 +18,18 @@
           exact>
           Home
         </g-link>
-        <!-- <g-link
+        <g-link
           to="/threads"
           class="mr-5 hidden md:block"
           exact>
           Threads
         </g-link>
-        <g-link
+        <!-- <g-link
           to="/resources"
           class="mr-5 hidden md:block"
           exact>
           Resources
-        </g-link> -->
+        </g-link>  -->
         <!-- <g-link
           to="/pages/contribute"
           class="mr-5 hidden md:block"

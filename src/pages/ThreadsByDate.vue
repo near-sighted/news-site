@@ -6,13 +6,13 @@
       </template>
       <template v-slot:content>
         <p class="text-4xl md:text-6xl">
-          All Threads
+          Threads
         </p>
-        <!-- <p class="text-3xl md:text-5xl">
+        <p class="text-3xl md:text-5xl">
           {{formattedDate}}
-        </p> -->
+        </p>
         <p class="text-lg md:text-2xl">
-          We currently have {{ focusedThreads.length }} threads grouped by date from the last 6 weeks
+          We have currently {{ focusedThreads.length }} threads for the above date.
         </p>
       </template>
     </PageHeader>
@@ -20,10 +20,10 @@
     <div class="container px-5 py-12 mx-auto">
       <section>
         <div class="flex flex-wrap -m-4">
-          <RecordCard
-            v-for="record in groupedByDate"
-            :key="record.path"
-            :record="record" />
+          <ThreadCard
+            v-for="item in focusedThreads"
+            :key="item.node.id"
+            :thread="item.node" />
         </div>
       </section>
       <!-- <div
@@ -87,7 +87,7 @@
 
 <script>
 import PageHeader from '~/components/PageHeader'
-import RecordCard from '~/components/RecordCard'
+import ThreadCard from '~/components/ThreadCard'
 import Pagination from '~/components/Pagination'
 import moment from 'moment'
 export default {
@@ -97,7 +97,7 @@ export default {
   components: {
     PageHeader,
     Pagination,
-    RecordCard
+    ThreadCard
   },
   computed: { 
     formattedDate() {
@@ -106,40 +106,6 @@ export default {
     // applying multiple to the query
     focusedThreads() { 
       return this.$page.threads.edges
-    },
-    groupedByDate() {
-      let records = {}
-      this.$page.threads.edges.forEach(el => {
-        
-        if(!el.node.tags.length) return
-        records[el.node.path] = records[el.node.path] || {}
-        records[el.node.path].threadCount = records[el.node.path].threadCount || 0
-        records[el.node.path].path = records[el.node.path].path || `/threads/${el.node.path}`
-        records[el.node.path].formattedDate = records[el.node.path].formattedDate || moment(el.node.date).format('MMMM Do, YYYY')
-        records[el.node.path].threadCount += 1
-        records[el.node.path].tags = records[el.node.path].tags || new Set()
-        for (let tag of el.node.tags) {
-          let formattedTag = tag.title.replace(/[(\s+)(.)]/g, '').toLowerCase()
-          if (!records[el.node.path].tags.has(tag.title)) {
-            records[el.node.path].tags.add(tag.title)
-            records[el.node.path].tags.add(tag.title)
-            records[el.node.path].tagsMetadata = records[el.node.path].tagsMetadata || {}
-            records[el.node.path].tagsMetadata[formattedTag] = {
-              title: tag.title,
-              path: formattedTag
-            } 
-          }
-        }
-      })
-      for (let obj in records) {
-        records[obj].tags = Array.from(records[obj].tags)
-        // records[obj].tags = {}
-        // records[obj].tags.slug = 
-
-        // records[obj].tags = records[obj].tags.sort((a,b) => a-b)
-      }
-      console.log(records)
-      return records
     } 
   }
 };

@@ -41,7 +41,7 @@
               class="border-2 border-gray-200 m-2"
             >
               <g-link
-                :to="groupName == 'Tag' ? 'tags/' + result.node.slug : 'threads/' + result.node.issueDate"
+                :to="groupName == 'Tag' ? 'tags/' + result.node.slug.toLowerCase() : 'threads/' + result.node.issueDate"
               >
                 <div class="w-full p-4">
                   <h3>{{result.node.name}}</h3>
