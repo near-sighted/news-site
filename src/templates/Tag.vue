@@ -1,11 +1,16 @@
 <template>
   <Layout>
-    <PageHeader>
+    <PageHeader class="h-96">
       <template v-slot:image>
-        <g-image src="~/assets/images/janko-ferlic-specialdaddy-sfL_QOnmy00-unsplash.jpg" />
+        <TagChart 
+          v-if="loaded"
+          :chartdata="chartdata"
+          :options="options"
+          class="w-full absolute top-0 left-0 h-full -z-10"
+        />
       </template>
       <template v-slot:content>
-        <p class="text-4xl md:text-6xl">
+        <p class="text-4xl md:text-6xl -mt-20">
           #{{ $page.records.title }}
         </p>
         <p
@@ -14,7 +19,6 @@
         </p>
       </template>
     </PageHeader>
-
     <div class="container px-5 py-12 mx-auto">
       <section>
         <div class="flex flex-wrap justify-center -m-4">
@@ -74,6 +78,15 @@ query ($id: ID!) {
       }
     }
   }
+  tags:allTag {
+    edges {
+      node {
+        name
+        calculationConvoWeekFromConversations
+        past6Weeks
+      }
+    }
+  }
 }
 </page-query>
 
@@ -81,14 +94,40 @@ query ($id: ID!) {
 import PageHeader from '~/components/PageHeader'
 import RecordCard from '~/components/RecordCard'
 import Pagination from '~/components/Pagination'
+import TagChart from '~/components/TagChart'
 import moment from 'moment'
 export default {
   components: {
     PageHeader,
     RecordCard,
-    Pagination
+    Pagination,
+    TagChart
   },
-
+  data () {
+    return {
+      loaded: false,
+      chartdata: null,
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        legend: {
+          fontColor: '#fff'
+        },
+        scales: {
+          yAxes: [{
+            ticks: {
+                fontColor: '#fff'
+            }
+          }],
+          xAxes: [{
+            ticks: {
+                fontColor: '#fff',
+            }
+          }]
+        }
+      }
+    }
+  },
   metaInfo () {
     return {
       title: `Tag result for: ${this.$page.records.id}`
@@ -103,6 +142,30 @@ export default {
     formatDate (date) {
       return moment(date).format('MMMM Do YYYY')
     }
+  },
+  async mounted () {
+    this.loaded = false
+    try {
+      this.chartdata = {
+        labels: await this.$page.tags.edges.map(edge => edge.node.name),
+        datasets: [
+          {
+            label: '# of mentions for ALL tags over the past 6 weeks',
+            backgroundColor: '#f87979',
+            data: await this.$page.tags.edges.map(edge => edge.node.past6Weeks)
+          }
+        ]
+      }
+      this.loaded = true
+    } catch (error) {
+      console.log(error)
+    }
   }
 };
 </script>
+
+<style>
+#line-chart {
+  opacity: .75;
+}
+</style>
