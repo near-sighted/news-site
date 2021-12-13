@@ -4,7 +4,6 @@ import DefaultLayout from '~/layouts/Default.vue'
 import VueMarkdown from 'vue-markdown'
 import SlideUpDown from 'vue-slide-up-down'
 
-
 // comments
 import Vssue from 'vssue';
 import GithubV4 from '@vssue/api-github-v4';
@@ -30,6 +29,19 @@ export default function (Vue, { router, head, isClient }) {
     baseURL: 'https://github.com',
     admins: ['humanman'],
   })
+
+  head.script.push({
+    src: 'https://www.googletagmanager.com/gtag/js?id=G-PDGH7X2V73',
+    async: true
+  })
+  
+  head.script.push({
+    innerHTML: `window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-PDGH7X2V73');`,
+    body: true
+  });
 
   head.meta.push({
     key: 'og:description',

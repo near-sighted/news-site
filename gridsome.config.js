@@ -45,12 +45,7 @@ module.exports = {
         tailwindConfig: './tailwind.config.js'
       }
     },
-    {
-      use: '@gridsome/plugin-google-analytics',
-      options: {
-        id: 'G-PDGH7X2V73'
-      }
-    },
+
     // {
     //   use: '@gridsome/source-filesystem',
     //   options: {
