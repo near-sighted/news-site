@@ -30,4 +30,23 @@ export default function (Vue, { router, head, isClient }) {
     baseURL: 'https://github.com',
     admins: ['humanman'],
   })
+
+  head.meta.push({
+    key: 'og:description',
+    name: 'og:description',
+    content: `NEAR Sighted captures the confusion in the NEAR ecosystem.`,
+  })
+
+  head.meta.push({
+    key: 'twitter:description',
+    name: 'twitter:description',
+    content: `NEAR Sighted captures the confusion in the NEAR ecosystem.`,
+  })
+
+  head.meta.push({
+    key: 'og:url',
+    name: 'og:url',
+    content: `https://nearsighted.news/assets/static/logo_black_on_white.d042d20.89310ef9c0e283169f2b50dcad5ade25.png`,
+  })
+ 
 }
