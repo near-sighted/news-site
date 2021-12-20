@@ -108,6 +108,11 @@ export default {
       loaded: false,
       chartdata: null,
       options: {
+        layout: {
+          padding: {
+            left: 20
+          }
+        },
         responsive: true,
         maintainAspectRatio: false,
         legend: {
@@ -121,7 +126,7 @@ export default {
           }],
           xAxes: [{
             ticks: {
-                fontColor: '#fff',
+                fontColor: '#fff'
             }
           }]
         }

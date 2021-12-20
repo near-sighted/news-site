@@ -14,10 +14,10 @@
 
 
 <script>
-import { Line } from 'vue-chartjs'
+import { Bar } from 'vue-chartjs'
 
 export default {
-  extends: Line,
+  extends: Bar,
   props: ['chartdata', 'options'],
   mounted () {
     this.renderChart(this.chartdata, this.options)
